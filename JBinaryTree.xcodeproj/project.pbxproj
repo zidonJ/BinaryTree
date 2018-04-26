@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72101F3D2091CDA100EF08F9 /* binary.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72101F3C2091CDA100EF08F9 /* binary.jpg */; };
 		7211982B208EFF1E00D2662F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7211982A208EFF1E00D2662F /* AppDelegate.swift */; };
 		7211982D208EFF1E00D2662F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7211982C208EFF1E00D2662F /* ViewController.swift */; };
 		72119830208EFF1E00D2662F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7211982E208EFF1E00D2662F /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72101F3C2091CDA100EF08F9 /* binary.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = binary.jpg; sourceTree = "<group>"; };
 		72119827208EFF1E00D2662F /* JBinaryTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JBinaryTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7211982A208EFF1E00D2662F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7211982C208EFF1E00D2662F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				7211982C208EFF1E00D2662F /* ViewController.swift */,
 				7211983C208EFFF700D2662F /* BinaryTree.swift */,
 				7211982E208EFF1E00D2662F /* Main.storyboard */,
+				72101F3C2091CDA100EF08F9 /* binary.jpg */,
 				72119831208EFF2000D2662F /* Assets.xcassets */,
 				72119833208EFF2000D2662F /* LaunchScreen.storyboard */,
 				72119836208EFF2000D2662F /* Info.plist */,
@@ -128,6 +131,7 @@
 				72119835208EFF2000D2662F /* LaunchScreen.storyboard in Resources */,
 				72119832208EFF2000D2662F /* Assets.xcassets in Resources */,
 				72119830208EFF1E00D2662F /* Main.storyboard in Resources */,
+				72101F3D2091CDA100EF08F9 /* binary.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

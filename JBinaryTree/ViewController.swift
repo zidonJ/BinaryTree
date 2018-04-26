@@ -15,24 +15,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // leaf nodes
+        let node7 = BinaryTree.node(.empty, "7", .empty)
+        let node8 = BinaryTree.node(.empty, "8", .empty)
+        let node6 = BinaryTree.node(node7, "6", node8)
+        let node4 = BinaryTree.node(.empty, "4", node6)
         let node5 = BinaryTree.node(.empty, "5", .empty)
-        let nodeA = BinaryTree.node(.empty, "a", .empty)
-        let node10 = BinaryTree.node(.empty, "10", .empty)
-        let node4 = BinaryTree.node(.empty, "4", .empty)
-        let node3 = BinaryTree.node(.empty, "3", .empty)
-        let nodeB = BinaryTree.node(.empty, "b", .empty)
         
         // intermediate nodes on the left
-        let aMinus10 = BinaryTree.node(nodeA, "-", node10)
-        let timesLeft = BinaryTree.node(node5, "*", aMinus10)
+        let timesLeft = BinaryTree.node(node4, "2", .empty)
         
         // intermediate nodes on the right
-        let minus4 = BinaryTree.node(.empty, "-", node4)
-        let divide3andB = BinaryTree.node(node3, "/", nodeB)
-        let timesRight = BinaryTree.node(minus4, "*", divide3andB)
+        let timesRight = BinaryTree.node(.empty, "3", node5)
         
         //跟节点
-        let tree = BinaryTree.node(timesLeft, "+", timesRight)
+        let tree = BinaryTree.node(timesLeft, "1", timesRight)
         
 //        print(tree)
 //        print(tree.count)  // 12
