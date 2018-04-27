@@ -46,6 +46,7 @@ public indirect enum BinaryTree<T> {
     }
     
     public var rChild:BinaryTree? {
+        
         switch self {
         case let .node(_, _, right):
             return right
@@ -89,6 +90,92 @@ extension BinaryTree {
             right.traversePostOrder(process: process)
             process(value)
         }
+    }
+}
+
+extension BinaryTree {
+    
+    //MARK:递归前序遍历
+    func recursionPreorderTraversal() {
+        
+        
+        switch self {
+        case .empty:
+            break
+            
+        case .node(_, _, _):
+
+            if self.tdata != nil {
+                print("前序遍历:",self.tdata ?? "")
+            }
+            
+        }
+        
+        lChild?.recursionPreorderTraversal()
+        rChild?.recursionPreorderTraversal()
+        
+    }
+    
+    //MARK:递归中序遍历
+    func recursionMiddleorderTraversal() {
+        
+        lChild?.recursionMiddleorderTraversal()
+        switch self {
+        case .empty:
+            break
+            
+        case .node(_, _, _):
+            
+            if self.tdata != nil {
+                print("中序遍历:",self.tdata ?? "")
+            }
+            
+        }
+        rChild?.recursionMiddleorderTraversal()
+
+    }
+    
+    //MARK:递归后序遍历
+    func recursionPostorderTraversal() {
+        
+        lChild?.recursionPostorderTraversal()
+        rChild?.recursionPostorderTraversal()
+        switch self {
+        case .empty:
+            
+            break
+        case .node(_, _, _):
+
+            if self.tdata != nil {
+                print("后序遍历:",self.tdata ?? "")
+            }
+            
+        }
+
+    }
+    
+    //MARK:层序遍历
+    func layerTraversal(tree:BinaryTree<String>?) {
+        
+        
+    }
+    
+    //MARK:求二叉树的深度
+    func hight_tree() -> Int{
+        
+        var h:Int,left:Int,right:Int;
+        
+        switch self {
+        case .empty:
+            return 0
+            
+        case .node(_, _, _):
+            left = (lChild?.hight_tree())!
+            right = (rChild?.hight_tree())!
+            h = left > right ? left + 1 : right + 1;
+            return h;
+        }
+
     }
 }
 

@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var a:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,52 +32,13 @@ class ViewController: UIViewController {
         //跟节点
         let tree = BinaryTree.node(timesLeft, "1", timesRight)
         
-//        print(tree)
-//        print(tree.count)  // 12
         
-        recursionPreorderTraversal(tree: tree)
-        recursionMiddleorderTraversal(tree: tree)
-        recursionPostorderTraversal(tree: tree)
+        tree.recursionPreorderTraversal()
+        tree.recursionMiddleorderTraversal()
+        tree.recursionPostorderTraversal()
+        print("二叉树的深度:\(tree.hight_tree())")
+        print("节点数量\(tree.count)")
     }
 
-    
-    //递归前序遍历
-    func recursionPreorderTraversal(tree:BinaryTree<String>?) {
-        
-        guard let ttree = tree else {
-            return
-        }
-        if ttree.tdata != nil {
-            print("前序遍历:",ttree.tdata ?? "")
-        }
-        recursionPreorderTraversal(tree: tree?.lChild)
-        recursionPreorderTraversal(tree: tree?.rChild)
-    }
-    
-    //递归中序遍历
-    func recursionMiddleorderTraversal(tree:BinaryTree<String>?) {
-        
-        guard let ttree = tree else {
-            return
-        }
-        recursionMiddleorderTraversal(tree: tree?.lChild)
-        if ttree.tdata != nil {
-            print("中序遍历:",ttree.tdata ?? "")
-        }
-        recursionMiddleorderTraversal(tree: tree?.rChild)
-    }
-
-    //递归后序遍历
-    func recursionPostorderTraversal(tree:BinaryTree<String>?) {
-        
-        guard let ttree = tree else {
-            return
-        }
-        recursionPostorderTraversal(tree: tree?.lChild)
-        recursionPostorderTraversal(tree: tree?.rChild)
-        if ttree.tdata != nil {
-            print("后序遍历:",ttree.tdata ?? "")
-        }
-    }
 }
 
