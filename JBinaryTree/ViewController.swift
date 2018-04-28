@@ -36,7 +36,6 @@ class ViewController: UIViewController {
         
         print("若为1,两棵树相等",tree.is_equal(t1: tree1))
         
-        
         tree.recursionPreorderTraversal()
         tree.recursionMiddleorderTraversal()
         tree.recursionPostorderTraversal()

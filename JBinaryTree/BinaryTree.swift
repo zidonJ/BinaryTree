@@ -70,6 +70,7 @@ extension BinaryTree: CustomStringConvertible {
     }
 }
 
+//MARK:遍历
 extension BinaryTree {
     public func traverseInOrder(process: (T) -> Void) {
         if case let .node(left, value, right) = self {
@@ -159,6 +160,12 @@ extension BinaryTree {
         
     }
     
+}
+
+
+//MARK:简单计算
+extension BinaryTree {
+    
     //MARK:求二叉树的深度
     func hight_tree() -> Int{
         
@@ -174,7 +181,7 @@ extension BinaryTree {
             h = left > right ? left + 1 : right + 1;
             return h;
         }
-
+        
     }
     
     //MARK:判断两棵树相等 若为1才相等
@@ -183,9 +190,9 @@ extension BinaryTree {
         switch self {
         case .empty:
             switch t1 {
-                case .empty:
+            case .empty:
                 return 1
-                case .node(_, _, _):
+            case .node(_, _, _):
                 return 0
             }
         case .node(_, _, _):
@@ -205,5 +212,25 @@ extension BinaryTree {
         }
         return 0
     }
+    
+    //MARK:根据前序遍历生成树
+    func createByTraverse(preTra:NSArray) -> BinaryTree {
+        return BinaryTree.empty
+    }
+    
+    //MARK:二叉树的查找
+//    func search_tree(tree:BinaryTree<T>){
+//    if(!t){
+//    return NULL;
+//    }
+//    if(t->data == x){
+//    return t;
+//    }else{
+//    if(!search_tree(t->lchild,x)){
+//    return search_tree(t->rchild,x);
+//    }
+//    return t;
+//    }
+//    }
 }
 
