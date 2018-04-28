@@ -32,6 +32,10 @@ class ViewController: UIViewController {
         //跟节点
         let tree = BinaryTree.node(timesLeft, "1", timesRight)
         
+        let tree1 = BinaryTree.node(timesLeft, "1", timesRight)
+        
+        print("若为1,两棵树相等",tree.is_equal(t1: tree1))
+        
         
         tree.recursionPreorderTraversal()
         tree.recursionMiddleorderTraversal()
